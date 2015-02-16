@@ -1,0 +1,93 @@
+    1  git clone https://github.com/jashkenas/coffee-script.git
+    2  git clone https://github.com/jashkenas/coffee-script.git jeremys-coffee
+    3  cd my-proj/
+    4  git init
+    5  git config --list
+    6  git config --help
+    7  cd ..
+    8  cd github/
+    9  > git remote
+   10  origin
+   11  > get remote 
+   12  show origin
+   13  git remote show origin
+   14  git fetch
+   15  git fetch origin
+   16  git branch
+   17  * master
+   18  > git clone https://github.com/chriseppstein/compass.git
+   19  > cd compass
+   20  > git branch
+   21  * stable
+   22  git checkout master
+   23  git pull --rebase
+   24  git fetch
+   25  git rebase origin/master master
+   26  # make sure we're on our local_master_
+   27  git checkout master
+   28  # create our topic branch
+   29  git checkout -b 1234_sales_tax_calculations master
+   30  # add all files under the current directory
+   31  git add .
+   32  # add all files under the lib/ directory
+   33  git add lib/
+   34  # add fool_spec.rb and foo2_spec.rb specifically
+   35  add spec/fool_spec.rb
+   36  git add spec/foo2_spec.rb
+   37  # remove a specific file
+   38  git rm path/to/file
+   39  # remove an entire directory
+   40  git rm -r path/to/directory/
+   41  #add all files under the current directory
+   42  # and also remove any deleted files under the current directory
+   43  git add -u
+   44  # add all files under lib/ directory
+   45  # and also remove any deleted files under lib/
+   46  git add -u lib/
+   47  git commit -m "Implemented the Michigan sales tax calculations [#1234]"
+   48  git commit -am "Refactoring SalesTaxHelper into SalesTax module [#1234]"
+   49  git add README
+   50  git commit --amend
+   51  git add README
+   52  get commit --amend -C HEAD
+   53  git config --global alias.amend "commit --amend -C HEAD"
+   54  git add README
+   55  git amend
+   56  # assuming you're on the topic branch with the WIP commit
+   57  git reset --soft HEAD~1
+   58  # assuming you're on the topic branch with the WIP commit
+   59  git reset --head HEAD~1
+   60  git reset --soft HEAD~10
+   61  git reset --hard HEAD~6
+   62  > git push --set-upstream origin 1234_sales_tax_calculations
+   63  git push --set-upstream origin 1234_sales_tax_calculations
+   64  > git push
+   65  fatal: The current branch 1234_sales_tax_calculations has no upstream branch. To push the current branch and set the remote as upstream, use
+   66  git push --set-upstream origin 1234_sales_tax_calculations
+   67  git push
+   68  # make sure master is up to date
+   69  git checkout master
+   70  git pull --rebase
+   71  # make sure our topic branch is fully pushed
+   72  git checkout 1234_sales_tax_calculations
+   73  git push
+   74  # make sure our topic branch is up to date with master
+   75  git rebase master
+   76  git rebase master
+   77  First, rewinding head to replay your work on top of it...
+   78  Fast-forwarded 1234_sales_tax_calculations to master.
+   79  both modified: lib/sales_tax.rb
+   80  git addlib/sales_tax.rb
+   81  git rebase --continue
+   82  git push -f
+   83  >git push
+   84  > git push
+   85  To git@mygitrepos:zdennis/my-project.git
+   86  # get back on master
+   87  git checkout master
+   88  # merge our topic branch into master
+   89  git merge 1234_sales_tax_calculations
+   90  # push the latest changes to master
+   91  git push
+   92  git pull --rebase
+   93  history > reisz_assign3b.txt
